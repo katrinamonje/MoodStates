@@ -64,7 +64,7 @@ function setup() {
 
 // Very simple, sets the background color and calls your state machine function
 function draw() {
-  background(192);
+  background(255);
 
   // will call your state machine function
   drawFunction();
@@ -93,7 +93,7 @@ drawThree = function() {
    image(images[2],width/2, height/2);
 
    fill(40,230,120);
-   text("ins", width/2, height - gTextOffset);
+   text("inspired", width/2, height - gTextOffset);
 }
 
 //-- drawOne() will draw the image at index 3 from the array
