@@ -3,10 +3,9 @@
 
 
 ### Overview
-This is a template for a simple state machine that goes between five states
+This is an Interaction Design Course assignment exploring simple state machines.
 
-
-### Modifying the Template
+### Rules for Modifying the Template
 
 (1) Add your own PNG files in the assets folder. Make sure they match the names ***exactly*** of the existing PNGs.
 
