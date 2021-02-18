@@ -2,6 +2,12 @@
 	SimpleStateMachine - TEMPLATE
 	by Scott Kildall
 
+  Addition:
+  Create a new state called drawSplash; also add splash.png
+
+  (1) Upon startup, go to the state
+  (2) When the mouse is clicked, go to drawOne
+
 	Template:
 
 	(1) Add your own PNG files in the assets folder. Make sure they match the names ***exactly*** of the existing PNGs.
@@ -47,6 +53,7 @@ function preload() {
   images[2] = loadImage('assets/inspired.png');
   images[3] = loadImage('assets/excited.png');
   images[4] = loadImage('assets/hopeful.png');
+  images[5] = loadImage('assets/splash.png');
 }
 
 // Center drawing, drawFunction will be one for default
@@ -58,8 +65,8 @@ function setup() {
   textAlign(CENTER);
   textSize(24);
 
-  // set to one for startup
-  drawFunction = drawOne;
+  // set to splash for startup
+  drawFunction = drawSplash;
 }
 
 // Very simple, sets the background color and calls your state machine function
@@ -73,11 +80,8 @@ function draw() {
 //========= TEMPLATE: modify these functions, INSIDE the function blocks only =========
 
 //-- drawOne() will draw the image at index 0 from the array
-drawOne = function() {
-   image(images[0],width/2, height/2);
-
-   fill(0,0,0);
-   text("calm", width/2, height - gTextOffset);
+drawSplash = function() {
+   image(images[5],width/2, height/2);
 }
 
 //-- drawTwo() will draw the image at index 1 from the array
@@ -131,5 +135,14 @@ function keyTyped() {
   }
   else if( key === '5' ) {
   	drawFunction = drawFive;
+  }
+  else if( key === 's' ) {
+    drawFunction = drawSplash;
+  }
+}
+
+function mousePressed() {
+  if(drawFunction == drawSplash ) { 
+    drawFunction = drawOne;
   }
 }
