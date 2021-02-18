@@ -39,6 +39,10 @@
 
 // Array of images
 var images = [];
+var strings =[];
+var midX
+var startY;
+var lineHeight = 24;
 
 // variable that is a function 
 var drawFunction;
@@ -60,6 +64,10 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
+  // Set variables for array
+  midX = width/2;
+  startY = 60;
+
   // Center our drawing objects
   imageMode(CENTER);
   textAlign(CENTER);
@@ -67,6 +75,7 @@ function setup() {
 
  // Array for instructions screen
   drawInstructions();
+  loadArray();
 
   // set to splash for startup
   drawFunction = drawSplash;
@@ -128,7 +137,7 @@ drawSplash = function() {
 }
 
 // Draw the strings from the array
-function draw() {
+function drawInstructions() {
   background(0);
 
   fill(255);
