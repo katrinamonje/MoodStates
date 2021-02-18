@@ -80,8 +80,11 @@ function draw() {
 //========= TEMPLATE: modify these functions, INSIDE the function blocks only =========
 
 //-- drawOne() will draw the image at index 0 from the array
-drawSplash = function() {
-   image(images[5],width/2, height/2);
+drawOne = function() {
+   image(images[0],width/2, height/2);
+
+   fill(0,0,0);
+   text("calm", width/2, height - gTextOffset);
 }
 
 //-- drawTwo() will draw the image at index 1 from the array
@@ -92,7 +95,7 @@ drawTwo = function() {
    text("energized", width/2, height - gTextOffset);
 }
 
-//-- drawOne() will draw the image at index 2 from the array
+//-- drawThree() will draw the image at index 2 from the array
 drawThree = function() {
    image(images[2],width/2, height/2);
 
@@ -100,7 +103,7 @@ drawThree = function() {
    text("inspired", width/2, height - gTextOffset);
 }
 
-//-- drawOne() will draw the image at index 3 from the array
+//-- drawFour() will draw the image at index 3 from the array
 drawFour = function() {
    image(images[3],width/2, height/2);
 
@@ -108,7 +111,7 @@ drawFour = function() {
    text("excited", width/2, height - gTextOffset);
 }
 
-//-- drawOne() will draw the image at index 4 from the array
+//-- drawFive() will draw the image at index 4 from the array
 drawFive = function() {
    image(images[4],width/2, height/2);
 
@@ -116,6 +119,10 @@ drawFive = function() {
    text("hopeful", width/2, height - gTextOffset);
 }
 
+//-- drawSplash() will draw the image at index 4 from the array
+drawSplash = function() {
+   image(images[5],width/2, height/2);
+}
 
 //========= TEMPLATE: add or change interface functions, as you like =========
 
@@ -142,7 +149,7 @@ function keyTyped() {
 }
 
 function mousePressed() {
-  if(drawFunction == drawSplash ) { 
+  if( drawFunction === drawSplash ) { 
     drawFunction = drawOne;
   }
 }
