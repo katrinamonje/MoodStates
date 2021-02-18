@@ -188,6 +188,6 @@ function keyTyped() {
 
 function mousePressed() {
   if( drawFunction === drawSplash ) { 
-    drawFunction = drawInstruction;
+    drawFunction = drawInstructions;
   }
 }
