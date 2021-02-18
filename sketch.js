@@ -2,6 +2,9 @@
 	SimpleStateMachine - TEMPLATE
 	by Scott Kildall
 
+  SimpleStateMachine + Splash + Instructions screen
+  by Katrina Monje
+
   Addition:
   Create a new state called drawSplash; also add splash.png
 
@@ -39,6 +42,8 @@
 
 // Array of images
 var images = [];
+
+// Array of strings
 var strings =[];
 var midX
 var startY;
@@ -74,7 +79,6 @@ function setup() {
   textSize(24);
 
  // Array for instructions screen
-  drawInstructions();
   loadArray();
 
   // set to splash for startup
@@ -134,10 +138,13 @@ drawFive = function() {
 //-- drawSplash() will draw the image at index 4 from the array
 drawSplash = function() {
    image(images[5],width/2, height/2);
+
+  fill(230,50,50);
+   text("refresh mood!", width/2, height - gTextOffset);   
 }
 
 // Draw the strings from the array
-function drawInstructions() {
+drawInstructions = function() {
   background(0);
 
   fill(255);
