@@ -144,7 +144,7 @@ function loadArray() {
   strings[3] = "Press 4 for an excited mood";
   strings[4] = "Press 5 for a hopeful mood";
   strings[5] = "Press s to refresh mood";
-  
+}
 
 //========= TEMPLATE: add or change interface functions, as you like =========
 
