@@ -65,6 +65,9 @@ function setup() {
   textAlign(CENTER);
   textSize(24);
 
+ // Array for instructions screen
+  drawInstructions();
+
   // set to splash for startup
   drawFunction = drawSplash;
 }
@@ -123,6 +126,25 @@ drawFive = function() {
 drawSplash = function() {
    image(images[5],width/2, height/2);
 }
+
+// Draw the strings from the array
+function draw() {
+  background(0);
+
+  fill(255);
+  for( let i = 0 ; i < strings.length; i++) {
+        text( strings[i], midX, startY + (i * lineHeight) )
+  }
+}
+
+function loadArray() {
+  strings[0] = "Press 1 for a calm mood";
+  strings[1] = "Press 2 for an energized mood";
+  strings[2] = "Press 3 for an inspired mood";
+  strings[3] = "Press 4 for an excited mood";
+  strings[4] = "Press 5 for a hopeful mood";
+  strings[5] = "Press s to refresh mood";
+  
 
 //========= TEMPLATE: add or change interface functions, as you like =========
 
